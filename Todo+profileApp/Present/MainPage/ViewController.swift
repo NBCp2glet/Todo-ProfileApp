@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     var catButton: UIButton = {
         var btn = UIButton()
-        btn.setTitle("고양이", for: .normal)
+        btn.setTitle("고양이 보러 갈래?", for: .normal)
         btn.setTitleColor(.systemBlue, for: .normal)
         btn.addTarget(self, action: #selector(tappedCatButton), for: .touchUpInside)
         return btn

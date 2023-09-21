@@ -16,8 +16,9 @@ class DataManager {
     let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ToDo")
     
     func readData() -> [UseTodo] {
+        let request = NSFetchRequest<NSManagedObject>(entityName: "ToDo")
         do {
-            let todoDataArray = try context?.fetch(fetchRequest) as? [ToDo]
+            let todoDataArray = try context?.fetch(request) as? [ToDo]
             return todoDataArray!.map { $0.asUseTodo() }
         } catch {
             print("데이터 검색 중 오류 발생: \(error)")
@@ -36,7 +37,6 @@ class DataManager {
                 todoData.modifyDate = CurrentTime.getCurrentTime()
                 todoData.id = todo.id
                 do {
-                    print(todoData)
                     try context.save()
                     print("create")
                 } catch {
@@ -79,8 +79,8 @@ class DataManager {
         }
     }
     
-    func deleteData(ToDo: ToDo) {
-        fetchRequest.predicate = NSPredicate(format: "id == %@", ToDo.id!.uuidString )
+    func deleteData(todo: UseTodo) {
+        fetchRequest.predicate = NSPredicate(format: "id == %@", todo.id.uuidString )
         if let context = context {
             do {
                 let todoDataArray = try context.fetch(fetchRequest)

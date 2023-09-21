@@ -11,7 +11,6 @@ class Constant{
     static var defalutMargin = 10
 }
 
-
 struct CurrentTime {
     static func getCurrentTime() -> Date {
         let currentTime = Date()

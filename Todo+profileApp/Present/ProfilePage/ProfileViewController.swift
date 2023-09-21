@@ -47,11 +47,8 @@ class ProfileViewController: UIViewController {
         return view
     }()
     
-    var postView: UIView = {
-        var view = UIView()
-        return view
-    }()
-    
+    var postView = UIView()
+
     var post: UILabel = {
         var label = UILabel()
         label.text = "7"
@@ -67,11 +64,8 @@ class ProfileViewController: UIViewController {
         return label
     }()
     
-    var followerView: UIView = {
-        var view = UIView()
-        return view
-    }()
-    
+    var followerView = UIView()
+
     var follower: UILabel = {
         var label = UILabel()
         label.text = "0"
@@ -87,11 +81,8 @@ class ProfileViewController: UIViewController {
         return label
     }()
     
-    var followingView: UIView = {
-        var view = UIView()
-        return view
-    }()
-    
+    var followingView = UIView()
+
     var following: UILabel = {
         var label = UILabel()
         label.text = "0"

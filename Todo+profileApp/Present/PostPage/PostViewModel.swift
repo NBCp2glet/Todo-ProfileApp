@@ -14,7 +14,6 @@ class PostViewModel {
     
     func completeTodo(id: UUID) {
         if let new = DataManager.dataManager.readData().first(where: { $0.id == id}) {
-            print(new.isCompleted)
             DataManager.dataManager.updateData(id: new.id, isCompleted: !new.isCompleted)
         }
     }

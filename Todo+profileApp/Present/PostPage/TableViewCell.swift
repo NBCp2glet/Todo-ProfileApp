@@ -11,11 +11,8 @@ import SnapKit
 class TableViewCell: UITableViewCell {
     let viewModel = PostViewModel()
     
-    var labelText: UILabel = {
-        var label = UILabel()
-        return label
-    }()
-    
+    var labelText = UILabel()
+
     var switchButton: UISwitch = {
         var btn = UISwitch()
         btn.isOn = false
