@@ -22,7 +22,7 @@ iOS 앱개발 심화
 <table>
    <tr>
       <td>
-        !(https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/24009839-424a-43ea-8849-4dce54541e2f)
+        ![](https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/24009839-424a-43ea-8849-4dce54541e2f)
       </td>
       <td>
         !(https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/908bc1ba-493d-48df-b22d-1684ed1be32c)
