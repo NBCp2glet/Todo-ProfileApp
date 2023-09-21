@@ -22,13 +22,13 @@ iOS 앱개발 심화
 <table>
    <tr>
       <td>
-        ![Simulator Screenshot - iPhone 14 Pro - 2023-09-22 at 02 25 54](https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/24009839-424a-43ea-8849-4dce54541e2f)
+        !(https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/24009839-424a-43ea-8849-4dce54541e2f)
       </td>
       <td>
-        ![Simulator Screenshot - iPhone 14 Pro - 2023-09-22 at 02 34 00](https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/908bc1ba-493d-48df-b22d-1684ed1be32c)
+        !(https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/908bc1ba-493d-48df-b22d-1684ed1be32c)
       </td>
       <td>
-         ![Simulator Screenshot - iPhone 14 Pro - 2023-09-22 at 02 26 41](https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/d2b6dc13-5fb8-4697-a26e-4e659147527a)
+         !(https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/d2b6dc13-5fb8-4697-a26e-4e659147527a)
       </td>
       <td>
          ![Simulator Screenshot - iPhone 14 Pro - 2023-09-22 at 02 26 48](https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/0d8d40a5-40ae-428d-9868-c5b3d8b70d23)
