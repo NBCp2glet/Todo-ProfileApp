@@ -56,6 +56,9 @@ iOS 앱개발 심화
    </tr>
 </table>
 
+## 디렉토리 구조
+<img width="258" alt="image" src="https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/ac8eed51-7866-43cf-8142-bac2cee4d3a6">
+
 ## 사용 라이브러리
 ```text
 https://github.com/SnapKit/SnapKit
