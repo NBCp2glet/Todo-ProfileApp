@@ -22,19 +22,19 @@ iOS 앱개발 심화
 <table>
    <tr>
       <td>
-        ![](https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/24009839-424a-43ea-8849-4dce54541e2f)
+        <img width="426" alt="image" src="https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/6b2c5fc7-9f4a-4b67-b611-bd220b7fcb55">
       </td>
       <td>
-        !(https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/908bc1ba-493d-48df-b22d-1684ed1be32c)
+         <img width="431" alt="image" src="https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/febc94ed-d5d0-4c5a-bac1-5b50f44700d6">
       </td>
       <td>
-         !(https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/d2b6dc13-5fb8-4697-a26e-4e659147527a)
+         <img width="432" alt="image" src="https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/ba861c44-b7d2-45e4-a21c-65efa43e22be">
       </td>
       <td>
-         ![Simulator Screenshot - iPhone 14 Pro - 2023-09-22 at 02 26 48](https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/0d8d40a5-40ae-428d-9868-c5b3d8b70d23)
+         <img width="432" alt="image" src="https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/89ead01d-fe39-46f8-95a5-01e67022dd3b">
       </td>
       <td>
-     ![Simulator Screenshot - iPhone 14 Pro - 2023-09-22 at 02 26 50](https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/6dc90c54-4827-4b22-8035-f408151245d0)
+         <img width="430" alt="image" src="https://github.com/NBCp2glet/Todo-ProfileApp/assets/61182499/dc80b517-c8fc-4dfa-968c-867a14aabfb3">
       </td>
    </tr>
    <tr>
