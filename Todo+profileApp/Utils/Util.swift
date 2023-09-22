@@ -7,12 +7,11 @@
 
 import UIKit
 
-class Constant{
+class Constant {
     static var defalutMargin = 10
 }
 
-
-struct CurrentTime {
+enum CurrentTime {
     static func getCurrentTime() -> Date {
         let currentTime = Date()
         return currentTime

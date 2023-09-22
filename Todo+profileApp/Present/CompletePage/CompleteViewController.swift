@@ -5,8 +5,8 @@
 //  Created by t2023-m0056 on 2023/09/15.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 class CompleteViewController: UIViewController {
     let viewModel = CompleteViewModel()
@@ -25,7 +25,7 @@ class CompleteViewController: UIViewController {
         return tv
     }()
     
-    lazy var completeList = self.viewModel.getTodo().filter{ $0.isCompleted == true }
+    lazy var completeList = self.viewModel.getTodo().filter { $0.isCompleted == true }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,17 +41,17 @@ class CompleteViewController: UIViewController {
         view.addSubview(tableView)
         view.addSubview(backButton)
         
-        backButton.snp.makeConstraints{
+        backButton.snp.makeConstraints {
             $0.top.leading.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin)
         }
         
-        tableView.snp.makeConstraints{
+        tableView.snp.makeConstraints {
             $0.top.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
     @objc func tappedBackButton() {
-        self.dismiss(animated: false)
+        dismiss(animated: false)
     }
 }
 

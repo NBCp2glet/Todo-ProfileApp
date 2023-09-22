@@ -5,17 +5,14 @@
 //  Created by t2023-m0056 on 2023/09/15.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 class TableViewCell: UITableViewCell {
     let viewModel = PostViewModel()
     
-    var labelText: UILabel = {
-        var label = UILabel()
-        return label
-    }()
-    
+    var labelText = UILabel()
+
     var switchButton: UISwitch = {
         var btn = UISwitch()
         btn.isOn = false
@@ -39,11 +36,11 @@ class TableViewCell: UITableViewCell {
         contentView.addSubview(labelText)
         contentView.addSubview(switchButton)
         
-        labelText.snp.makeConstraints{
+        labelText.snp.makeConstraints {
             $0.top.leading.bottom.equalTo(safeAreaLayoutGuide).inset(Constant.defalutMargin)
         }
         
-        switchButton.snp.makeConstraints{
+        switchButton.snp.makeConstraints {
             $0.top.trailing.bottom.equalTo(safeAreaLayoutGuide).inset(Constant.defalutMargin)
         }
     }
@@ -73,14 +70,12 @@ class TableViewCell: UITableViewCell {
             viewModel.completeTodo(id: todo.id)
         }
     }
-    
 }
 
 extension String {
     func strikeThrough() -> NSAttributedString {
-        let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: self)
+        let attributeString = NSMutableAttributedString(string: self)
         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0, attributeString.length))
         return attributeString
     }
 }
-

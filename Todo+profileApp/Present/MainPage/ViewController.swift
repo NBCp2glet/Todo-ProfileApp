@@ -5,8 +5,8 @@
 //  Created by t2023-m0056 on 2023/09/21.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 class ViewController: UIViewController {
     var imageView: UIImageView = {
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     var catButton: UIButton = {
         var btn = UIButton()
-        btn.setTitle("고양이", for: .normal)
+        btn.setTitle("고양이 보러 갈래?", for: .normal)
         btn.setTitleColor(.systemBlue, for: .normal)
         btn.addTarget(self, action: #selector(tappedCatButton), for: .touchUpInside)
         return btn
@@ -61,56 +61,55 @@ class ViewController: UIViewController {
         view.addSubview(catButton)
         view.addSubview(collectionButton)
         
-        imageView.snp.makeConstraints{
+        imageView.snp.makeConstraints {
             $0.centerX.equalTo(view.safeAreaLayoutGuide)
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(200)
             $0.width.equalTo(200)
             $0.height.equalTo(100)
         }
         
-        checkTodo.snp.makeConstraints{
+        checkTodo.snp.makeConstraints {
             $0.centerX.equalTo(view.safeAreaLayoutGuide)
             $0.top.equalTo(imageView.snp.bottom).inset(-Constant.defalutMargin)
         }
         
-        completeTodo.snp.makeConstraints{
+        completeTodo.snp.makeConstraints {
             $0.centerX.equalTo(view.safeAreaLayoutGuide)
             $0.top.equalTo(checkTodo.snp.bottom).inset(-Constant.defalutMargin)
         }
         
-        catButton.snp.makeConstraints{
+        catButton.snp.makeConstraints {
             $0.centerX.equalTo(view.safeAreaLayoutGuide)
             $0.top.equalTo(completeTodo.snp.bottom).inset(-Constant.defalutMargin)
         }
         
-        collectionButton.snp.makeConstraints{
+        collectionButton.snp.makeConstraints {
             $0.centerX.equalTo(view.safeAreaLayoutGuide)
             $0.top.equalTo(catButton.snp.bottom).inset(-Constant.defalutMargin)
         }
-        
     }
     
     @objc func tappedCheckTodo() {
         let vc = PostViewController()
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: false)
+        present(vc, animated: false)
     }
 
     @objc func tappedCompleteTodo() {
         let vc = CompleteViewController()
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: false)
+        present(vc, animated: false)
     }
 
     @objc func tappedCatButton() {
         let vc = CatViewController()
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: false)
+        present(vc, animated: false)
     }
 
     @objc func tappedCollectionButton() {
         let vc = ProfileViewController()
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: false)
+        present(vc, animated: false)
     }
 }

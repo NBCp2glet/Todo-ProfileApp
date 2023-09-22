@@ -5,13 +5,13 @@
 //  Created by t2023-m0056 on 2023/09/15.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 class PostViewController: UIViewController {
     let viewModel = PostViewModel()
     
-    var categorySection = Set((PostViewModel().getTodo().map{ $0.category }))
+    var categorySection = Set((PostViewModel().getTodo().map { $0.category }))
     
     var backButton: UIButton = {
         var btn = UIButton()
@@ -57,29 +57,28 @@ class PostViewController: UIViewController {
         view.addSubview(addButton)
         view.addSubview(tableView)
         
-        backButton.snp.makeConstraints{
+        backButton.snp.makeConstraints {
             $0.top.leading.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin)
         }
         
-        addButton.snp.makeConstraints{
+        addButton.snp.makeConstraints {
             $0.top.trailing.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin)
         }
         
-        tableView.snp.makeConstraints{
+        tableView.snp.makeConstraints {
             $0.top.equalTo(backButton.snp.bottom).inset(-Constant.defalutMargin)
             $0.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-        
     }
     
     func setAddbtn() {
-        let alert = UIAlertController(title: "완료 목록", message: "완료 하셨습니까?", preferredStyle: .alert)
-        let sucess = UIAlertAction(title: "확인", style: .default){ ok in
+        let alert = UIAlertController(title: "저장 하시겠습니까?", message: "", preferredStyle: .alert)
+        let sucess = UIAlertAction(title: "확인", style: .default) { _ in
             print("확인 버튼이 눌렸습니다.")
             self.viewModel.creatTodo(UseTodo(category: alert.textFields?.last?.text ?? "defaults", createDate: CurrentTime.getCurrentTime(), modifyDate: CurrentTime.getCurrentTime(), id: UUID(), isCompleted: false, title: alert.textFields?.first?.text ?? ""))
             self.tableView.reloadData()
         }
-        let cancel = UIAlertAction(title: "취소", style: .destructive){ cancel in
+        let cancel = UIAlertAction(title: "취소", style: .destructive) { _ in
             print("취소 버튼이 눌렸습니다.")
         }
         alert.addTextField { textField in
@@ -94,7 +93,7 @@ class PostViewController: UIViewController {
     }
     
     @objc func tappedBackButton() {
-        self.dismiss(animated: false)
+        dismiss(animated: false)
     }
     
     @objc func tappedAddButton() {
@@ -105,21 +104,21 @@ class PostViewController: UIViewController {
 extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let data = Array(categorySection).sorted()[section]
-        return viewModel.getTodo().filter{ $0.category == data }.count
+        return viewModel.getTodo().filter { $0.category == data }.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = Array(categorySection).sorted()[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-        cell.setTodo(viewModel.getTodo().filter{ $0.category == data }[indexPath.row])
+        cell.setTodo(viewModel.getTodo().filter { $0.category == data }[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
-        detailViewController.todoData = viewModel.getTodo().filter{ $0.category == Array(categorySection).sorted()[indexPath.section] }[indexPath.row]
+        detailViewController.todoData = viewModel.getTodo().filter { $0.category == Array(categorySection).sorted()[indexPath.section] }[indexPath.row]
         detailViewController.modalPresentationStyle = .fullScreen
-        self.present(detailViewController, animated: false)
+        present(detailViewController, animated: false)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
