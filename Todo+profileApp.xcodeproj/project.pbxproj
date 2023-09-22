@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF065DB72ABD33B40043E1AC /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF065DB62ABD33B40043E1AC /* CatViewModel.swift */; };
 		FF5C30E22ABC23B1001BD836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C30E12ABC23B1001BD836 /* AppDelegate.swift */; };
 		FF5C30E42ABC23B1001BD836 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C30E32ABC23B1001BD836 /* SceneDelegate.swift */; };
 		FF5C30E62ABC23B1001BD836 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C30E52ABC23B1001BD836 /* ViewController.swift */; };
@@ -32,9 +33,11 @@
 		FF5C31482ABC2D90001BD836 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C31472ABC2D90001BD836 /* PostViewModel.swift */; };
 		FF5C314A2ABC82F6001BD836 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C31492ABC82F6001BD836 /* DetailViewModel.swift */; };
 		FF5C314C2ABC8FEE001BD836 /* CompleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C314B2ABC8FEE001BD836 /* CompleteViewModel.swift */; };
+		FF5C314E2ABCB2C7001BD836 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C314D2ABCB2C7001BD836 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF065DB62ABD33B40043E1AC /* CatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModel.swift; sourceTree = "<group>"; };
 		FF5C30DE2ABC23B1001BD836 /* Todo+profileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo+profileApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5C30E12ABC23B1001BD836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF5C30E32ABC23B1001BD836 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		FF5C31472ABC2D90001BD836 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		FF5C31492ABC82F6001BD836 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		FF5C314B2ABC8FEE001BD836 /* CompleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewModel.swift; sourceTree = "<group>"; };
+		FF5C314D2ABCB2C7001BD836 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewModel.swift; path = ../../../../../Documents/ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				FF5C313B2ABC2A17001BD836 /* CatViewController.swift */,
+				FF065DB62ABD33B40043E1AC /* CatViewModel.swift */,
 			);
 			path = CatPage;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FF5C31352ABC29D1001BD836 /* ProfileViewController.swift */,
+				FF5C314D2ABCB2C7001BD836 /* ProfileViewModel.swift */,
 				FF5C31372ABC29DD001BD836 /* CollectionViewCell.swift */,
 			);
 			path = ProfilePage;
@@ -306,6 +312,8 @@
 				FF5C31422ABC2A79001BD836 /* DataManager.swift in Sources */,
 				FF5C30FA2ABC240D001BD836 /* ToDo+CoreDataClass.swift in Sources */,
 				FF5C31342ABC29BA001BD836 /* CompleteViewController.swift in Sources */,
+				FF065DB72ABD33B40043E1AC /* CatViewModel.swift in Sources */,
+				FF5C314E2ABCB2C7001BD836 /* ProfileViewModel.swift in Sources */,
 				FF5C30EC2ABC23B1001BD836 /* TodoModel.xcdatamodeld in Sources */,
 				FF5C31442ABC2A9B001BD836 /* CatImage.swift in Sources */,
 				FF5C31482ABC2D90001BD836 /* PostViewModel.swift in Sources */,

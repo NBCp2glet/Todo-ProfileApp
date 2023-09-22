@@ -73,7 +73,7 @@ class PostViewController: UIViewController {
     }
     
     func setAddbtn() {
-        let alert = UIAlertController(title: "완료 목록", message: "완료 하셨습니까?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "저장 하시겠습니까?", message: "", preferredStyle: .alert)
         let sucess = UIAlertAction(title: "확인", style: .default){ ok in
             print("확인 버튼이 눌렸습니다.")
             self.viewModel.creatTodo(UseTodo(category: alert.textFields?.last?.text ?? "defaults", createDate: CurrentTime.getCurrentTime(), modifyDate: CurrentTime.getCurrentTime(), id: UUID(), isCompleted: false, title: alert.textFields?.first?.text ?? ""))

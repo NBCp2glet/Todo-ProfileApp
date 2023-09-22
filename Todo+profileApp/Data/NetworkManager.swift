@@ -17,7 +17,7 @@ class NetworkManager{
     
     weak var delegate: NetworkManagerDelegate?
     
-    func getImage() {
+    func afGetImage() {
         AF.request("https://api.thecatapi.com/v1/images/search?limit=10", method: .get)
             .responseDecodable(of: [CatImage].self) { response in
                 switch response.result {

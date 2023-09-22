@@ -9,8 +9,7 @@ import UIKit
 import SnapKit
 
 class ProfileViewController: UIViewController {
-    
-    var dummyImage = [UIImage(named: "pic0"), UIImage(named: "pic1"), UIImage(named: "pic2"), UIImage(named: "pic3"), UIImage(named: "pic4"), UIImage(named: "pic5"), UIImage(named: "pic6"),]
+    let viewModel = ProfileViewModel()
     
     var backButton: UIButton = {
         var btn = UIButton()
@@ -354,12 +353,12 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dummyImage.count
+        return viewModel.getDummyImage().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
-        cell.collectionViewImage.image = dummyImage[indexPath.row]
+        cell.collectionViewImage.image = viewModel.getDummyImage()[indexPath.row]
         return cell
     }
 }

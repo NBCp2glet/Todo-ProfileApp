@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class CatViewController: UIViewController, NetworkManagerDelegate {
+    let viewModel = CatViewModel()
     
     var backButton: UIButton = {
         var btn = UIButton()
@@ -23,11 +24,18 @@ class CatViewController: UIViewController, NetworkManagerDelegate {
         view.image = UIImage(systemName: "photo")
         return view
     }()
+    
+    var resetButton: UIButton = {
+        var btn = UIButton()
+        btn.setImage(UIImage(systemName: "arrow.clockwise"), for: .normal)
+        btn.addTarget(self, action: #selector(tappedResetButton), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.networkManger.delegate = self
-        NetworkManager.networkManger.getImage()
+        viewModel.getImage()
         configureUI()
     }
     
@@ -35,6 +43,7 @@ class CatViewController: UIViewController, NetworkManagerDelegate {
         view.backgroundColor = .white
         
         view.addSubview(backButton)
+        view.addSubview(resetButton)
         view.addSubview(imageView)
         
         backButton.snp.makeConstraints{
@@ -45,6 +54,10 @@ class CatViewController: UIViewController, NetworkManagerDelegate {
             $0.center.equalTo(view)
             $0.width.height.equalTo(200)
         }
+        
+        resetButton.snp.makeConstraints{
+            $0.top.trailing.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin)
+        }
     }
     
     func didReceiveData(_ data: [CatImage]) {
@@ -53,5 +66,9 @@ class CatViewController: UIViewController, NetworkManagerDelegate {
     
     @objc func tappedBackButton() {
         self.dismiss(animated: false)
+    }
+    
+    @objc func tappedResetButton() {
+        viewModel.getImage()
     }
 }
