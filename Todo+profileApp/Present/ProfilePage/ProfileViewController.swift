@@ -5,8 +5,8 @@
 //  Created by t2023-m0056 on 2023/09/15.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 class ProfileViewController: UIViewController {
     let viewModel = ProfileViewModel()
@@ -120,7 +120,7 @@ class ProfileViewController: UIViewController {
     }()
    
     lazy var middleBar: UIStackView = {
-        var view = UIStackView(arrangedSubviews: [followButton, messageButton,])
+        var view = UIStackView(arrangedSubviews: [followButton, messageButton])
         view.axis = .horizontal
         view.spacing = 8
         view.distribution = .fillEqually
@@ -168,10 +168,10 @@ class ProfileViewController: UIViewController {
         return btn
     }()
     
-    let collectionView:UICollectionView = {
+    let collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-        let rowCount:CGFloat = 3
+        let rowCount: CGFloat = 3
         flowLayout.scrollDirection = .vertical
         flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width / rowCount) - 2, height: (UIScreen.main.bounds.width / rowCount) - 2)
         flowLayout.minimumLineSpacing = 2
@@ -187,6 +187,7 @@ class ProfileViewController: UIViewController {
     }()
 
     // MARK: LifeCycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -196,6 +197,7 @@ class ProfileViewController: UIViewController {
     }
     
     // MARK: Function
+
     func configureUI() {
         view.backgroundColor = .white
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.identifier)
@@ -222,112 +224,112 @@ class ProfileViewController: UIViewController {
         
         view.addSubview(gridButton)
         
-         view.addSubview(collectionView)
+        view.addSubview(collectionView)
         
         view.addSubview(navProfile)
         
-        backButton.snp.makeConstraints{
+        backButton.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin*2)
         }
         
-        userName.snp.makeConstraints{
+        userName.snp.makeConstraints {
             $0.top.centerX.equalTo(view.safeAreaLayoutGuide)
         }
         
-        menuButton.snp.makeConstraints{
+        menuButton.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.trailing.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin*2)
         }
         
-        userPic.snp.makeConstraints{
+        userPic.snp.makeConstraints {
             $0.top.equalTo(userName.snp.bottom).inset(-14)
             $0.leading.equalTo(backButton)
             $0.width.height.equalTo(88)
         }
         
-        userFollowInfo.snp.makeConstraints{
+        userFollowInfo.snp.makeConstraints {
             $0.top.equalTo(userName).inset(60)
             $0.leading.equalTo(userPic.snp.trailing).inset(-28)
             $0.trailing.equalTo(view.safeAreaLayoutGuide).inset(28)
             $0.height.equalTo(60)
         }
         
-        post.snp.makeConstraints{
+        post.snp.makeConstraints {
             $0.top.equalTo(postView)
             $0.leading.trailing.equalTo(postView).inset(Constant.defalutMargin)
         }
         
-        postLabel.snp.makeConstraints{
+        postLabel.snp.makeConstraints {
             $0.top.equalTo(post.snp.bottom)
             $0.leading.trailing.equalTo(postView).inset(Constant.defalutMargin)
             $0.bottom.equalTo(postView)
         }
         
-        follower.snp.makeConstraints{
+        follower.snp.makeConstraints {
             $0.top.equalTo(followerView)
             $0.leading.trailing.equalTo(followerView).inset(Constant.defalutMargin)
         }
         
-        followerLabel.snp.makeConstraints{
+        followerLabel.snp.makeConstraints {
             $0.top.equalTo(follower.snp.bottom)
             $0.leading.trailing.equalTo(followerView).inset(Constant.defalutMargin)
             $0.bottom.equalTo(followerView)
         }
         
-        following.snp.makeConstraints{
+        following.snp.makeConstraints {
             $0.top.equalTo(followingView)
             $0.leading.trailing.equalTo(followingView).inset(Constant.defalutMargin)
         }
         
-        followingLabel.snp.makeConstraints{
+        followingLabel.snp.makeConstraints {
             $0.top.equalTo(following.snp.bottom)
             $0.leading.trailing.equalTo(followingView).inset(Constant.defalutMargin)
             $0.bottom.equalTo(followingView)
         }
         
-        userNickName.snp.makeConstraints{
+        userNickName.snp.makeConstraints {
             $0.top.equalTo(userPic.snp.bottom).inset(-Constant.defalutMargin*2)
             $0.leading.equalTo(backButton)
             $0.trailing.equalTo(menuButton)
         }
         
-        userIntroduce.snp.makeConstraints{
+        userIntroduce.snp.makeConstraints {
             $0.top.equalTo(userNickName.snp.bottom).inset(-5)
             $0.leading.equalTo(backButton)
             $0.trailing.equalTo(menuButton)
         }
         
-        userLink.snp.makeConstraints{
+        userLink.snp.makeConstraints {
             $0.top.equalTo(userIntroduce.snp.bottom).inset(-5)
             $0.leading.equalTo(backButton)
             $0.trailing.equalTo(menuButton)
         }
         
-        middleBar.snp.makeConstraints{
+        middleBar.snp.makeConstraints {
             $0.top.equalTo(userLink.snp.bottom).inset(-Constant.defalutMargin)
             $0.leading.equalTo(backButton)
         }
         
-        moreButton.snp.makeConstraints{
+        moreButton.snp.makeConstraints {
             $0.top.equalTo(userLink.snp.bottom).inset(-Constant.defalutMargin)
             $0.leading.equalTo(middleBar.snp.trailing).inset(-Constant.defalutMargin)
             $0.trailing.equalTo(menuButton)
             $0.width.height.equalTo(30)
         }
         
-        gridButton.snp.makeConstraints{
+        gridButton.snp.makeConstraints {
             $0.top.equalTo(middleBar.snp.bottom)
             $0.leading.equalTo(view.safeAreaLayoutGuide)
             $0.width.equalTo(125)
         }
         
-        collectionView.snp.makeConstraints{
+        collectionView.snp.makeConstraints {
             $0.top.equalTo(gridButton.snp.bottom).inset(-3)
             $0.leading.trailing.equalTo(view.safeAreaLayoutGuide)
         }
         
-        navProfile.snp.makeConstraints{
+        navProfile.snp.makeConstraints {
             $0.top.equalTo(collectionView.snp.bottom).inset(-Constant.defalutMargin)
             $0.bottom.centerX.equalTo(view.safeAreaLayoutGuide)
         }
@@ -347,7 +349,7 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func tappedBackButton() {
-        self.dismiss(animated: false)
+        dismiss(animated: false)
     }
 }
 

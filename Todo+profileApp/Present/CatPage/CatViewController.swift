@@ -5,8 +5,8 @@
 //  Created by t2023-m0056 on 2023/09/15.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 class CatViewController: UIViewController, NetworkManagerDelegate {
     let viewModel = CatViewModel()
@@ -46,16 +46,16 @@ class CatViewController: UIViewController, NetworkManagerDelegate {
         view.addSubview(resetButton)
         view.addSubview(imageView)
         
-        backButton.snp.makeConstraints{
+        backButton.snp.makeConstraints {
             $0.top.leading.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin)
         }
         
-        imageView.snp.makeConstraints{
+        imageView.snp.makeConstraints {
             $0.center.equalTo(view)
             $0.width.height.equalTo(200)
         }
         
-        resetButton.snp.makeConstraints{
+        resetButton.snp.makeConstraints {
             $0.top.trailing.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin)
         }
     }
@@ -65,7 +65,7 @@ class CatViewController: UIViewController, NetworkManagerDelegate {
     }
     
     @objc func tappedBackButton() {
-        self.dismiss(animated: false)
+        dismiss(animated: false)
     }
     
     @objc func tappedResetButton() {

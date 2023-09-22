@@ -5,8 +5,8 @@
 //  Created by t2023-m0056 on 2023/09/15.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 class DetailViewController: UIViewController {
     let viewModel = DetailViewModel()
@@ -45,15 +45,15 @@ class DetailViewController: UIViewController {
         view.addSubview(backButton)
         view.addSubview(modifyContentButton)
         
-        backButton.snp.makeConstraints{
+        backButton.snp.makeConstraints {
             $0.top.leading.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin)
         }
         
-        modifyContentButton.snp.makeConstraints{
+        modifyContentButton.snp.makeConstraints {
             $0.top.trailing.equalTo(view.safeAreaLayoutGuide).inset(Constant.defalutMargin)
         }
         
-        titleLabel.snp.makeConstraints{
+        titleLabel.snp.makeConstraints {
             $0.center.equalTo(view)
         }
         
@@ -62,14 +62,14 @@ class DetailViewController: UIViewController {
     
     func setModifyButton() {
         let alert = UIAlertController(title: "내용 수정", message: "수정 하시게습니까?", preferredStyle: .alert)
-        let sucess = UIAlertAction(title: "확인", style: .default){ ok in
+        let sucess = UIAlertAction(title: "확인", style: .default) { _ in
             print("확인 버튼이 눌렸습니다.")
             if let todo = self.todoData {
                 self.viewModel.updateTodo(todo: UseTodo(category: todo.category, createDate: todo.createDate, modifyDate: CurrentTime.getCurrentTime(), id: todo.id, isCompleted: todo.isCompleted, title: alert.textFields?.first?.text ?? ""))
                 self.titleLabel.text = alert.textFields?.first?.text ?? ""
             }
         }
-        let cancel = UIAlertAction(title: "취소", style: .destructive){ cancel in
+        let cancel = UIAlertAction(title: "취소", style: .destructive) { _ in
             print("취소 버튼이 눌렸습니다.")
         }
         alert.addTextField { textField in
@@ -81,7 +81,7 @@ class DetailViewController: UIViewController {
     }
     
     @objc func tappedBackButton() {
-        self.dismiss(animated: false)
+        dismiss(animated: false)
     }
     
     @objc func tappedModifyButton() {

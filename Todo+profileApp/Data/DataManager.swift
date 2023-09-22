@@ -5,8 +5,8 @@
 //  Created by t2023-m0056 on 2023/09/15.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 class DataManager {
     static let dataManager = DataManager()
@@ -80,7 +80,7 @@ class DataManager {
     }
     
     func deleteData(todo: UseTodo) {
-        fetchRequest.predicate = NSPredicate(format: "id == %@", todo.id.uuidString )
+        fetchRequest.predicate = NSPredicate(format: "id == %@", todo.id.uuidString)
         if let context = context {
             do {
                 let todoDataArray = try context.fetch(fetchRequest)
