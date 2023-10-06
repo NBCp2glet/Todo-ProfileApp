@@ -176,7 +176,6 @@ class ProfileViewController: UIViewController {
         flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width / rowCount) - 2, height: (UIScreen.main.bounds.width / rowCount) - 2)
         flowLayout.minimumLineSpacing = 2
         flowLayout.minimumInteritemSpacing = 2
-        
         return collectionView
     }()
     
